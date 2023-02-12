@@ -4,8 +4,15 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Portfolio</title>
+
+    <!-- bosstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+
+    <!-- aos -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- my css -->
+
     <link rel="stylesheet" href="style.css" />
   </head>
   <body id="home">
@@ -64,8 +71,10 @@
           </div>
         </div>
         <div class="row justify-content-center fs-5 text-center">
-          <div class="col-md-4"><p>My name is I Gede Arya Krisnanda, you can call Arya, 20 years old, I was born in Lampung, August 07, 2003. I am the eldest of three children, my father is a teacher and my mother is a housewife.</p></div>
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-right" data-aos-duration="1000">
+            <p>My name is I Gede Arya Krisnanda, you can call Arya, 20 years old, I was born in Lampung, August 07, 2003. I am the eldest of three children, my father is a teacher and my mother is a housewife.</p>
+          </div>
+          <div class="col-md-4" data-aos="fade-left" data-aos-duration="1000">
             <p>High school graduates have an interest in programmers, especially frontend developers, understand HTML, CSS, Java script, PHP programming languages, master Microsoft Office.</p>
           </div>
         </div>
@@ -87,7 +96,7 @@
         </div>
         <div class="row">
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="1000">
               <img src="img/1.jpg" class="card-img-top" alt="Learning Coding" />
               <div class="card-body">
                 <p class="card-text">Learn coding from various platforms such as YouTube, Github, websites, and others.</p>
@@ -95,7 +104,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="200">
               <img src="img/2.jpg" class="card-img-top" alt="Reading Book" />
               <div class="card-body">
                 <p class="card-text">Likes to read books, especially self-improvement books.</p>
@@ -103,7 +112,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="400">
               <img src="img/3.jpg" class="card-img-top" alt="Watching Football" />
               <div class="card-body">
                 <p class="card-text">Likes watching football matches, favorite club is fc barcelona, favorite player is lionel andreas messi.</p>
@@ -112,6 +121,39 @@
           </div>
         </div>
       </div>
+
+      <section id="toll">
+        <div class="container">
+          <div class="row text-center mb-3">
+            <div class="col">
+              <h2>Gallery</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-lg-4 mb-3">
+              <div class="galerybox">
+                <h4 class="tool">Laptop</h4>
+                <img src="img/laptop.png" alt="Laptop" class="tool-img" />
+                <a href="#" class="btn btn-light tool-detail">Show Details</a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-3">
+              <div class="galerybox">
+                <h4 class="tool">Keyboard</h4>
+                <img src="img/keyboard.png" alt="Laptop" class="tool-img" />
+                <a href="#" class="btn btn-light tool-detail">Show Details</a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-3">
+              <div class="galerybox">
+                <h4 class="tool">Mouse</h4>
+                <img src="img/mouse.png" alt="Laptop" class="tool-img" />
+                <a href="#" class="btn btn-light tool-detail">Show Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#ffffff"
@@ -193,6 +235,18 @@
           .catch((error) => console.error("Error!", error.message));
       });
     </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/vanilla-tilt.min.js"></script>
+    <script type="text/javascript">
+      VanillaTilt.init(document.querySelectorAll(".galerybox"), {
+        max: 25,
+        speed: 400,
+        glare: true,
+      });
+    </script>
   </body>
 </html>
